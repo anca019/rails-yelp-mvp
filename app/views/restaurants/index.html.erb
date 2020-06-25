@@ -1,11 +1,14 @@
 <br>
-<ul>
   <% @restaurants.each do |restaurant| %>
-       <li><%= restaurant.name %></li>
-       <li><%= restaurant.address %></li>
-       <li><%= restaurant.category %></li>
-       <li><%= link_to 'Leave a review', new_restaurant_review_path(restaurant) %></li>
+  	   <br>
+       <h1><%= restaurant.name %></h1>
+       <%= restaurant.address %>
+       <br>
+       <%= restaurant.category %>
+       <br>
+       <%= link_to 'Leave a review', new_restaurant_review_path(restaurant), class: "btn btn-primary" %>
        <br>
    <% end %>
-</ul>
-<%= link_to 'Add a new restaurant', new_restaurant_path(@restaurant) %>
+<br>
+<br>
+<%= link_to 'Add a new restaurant', new_restaurant_path(@restaurant), class: "btn btn-primary" %>
